@@ -1,0 +1,185 @@
+.elementor-section {
+    background-color:  #4d186e;
+    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+    padding: 100px 50px 100px 50px;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    box-sizing: border-box;
+}
+
+.elementor-column { 
+    display: flex;
+    justify-content: center;
+    max-width: 1140px;
+    height: 100%;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    list-style: none;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.elementor-widget-container{
+    width: 100%;
+    height: 100%;
+}
+
+.speak-to-us {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.left-section {
+    margin-right: 50px;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.profile-img img{
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.profile-name span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    color: #74b7fe;
+}
+
+.right-section {
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.content-title {
+    font-size: 2em;
+    color: #74b7fe;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+p {
+    color: #fff;
+    text-align: left;
+}
+
+.custom-btn {
+    position: relative;
+    background-color: #3dce3d; /* Green button */
+    color: #ffffffc7;
+    border: none;
+    padding: 13px 27px;
+    font-size: 1em;
+    border-radius: 0px;
+    text-decoration: dotted;
+    display: inline-block;
+    margin-top: 2px;
+    text-align: center;
+    overflow: hidden; /* Ensure the slider doesn't overflow */
+    transition: color 0.3s ease; /* Smooth color transition */
+    float: left;
+}
+
+
+/* down arrow */
+.custom-btn:hover i {
+    transform: translateY(5px); /* Move arrow down on hover */
+}
+
+.custom-btn .fa {
+    margin-left: 10px;
+    font-size: 17px; /* Adjust size as needed */
+    transition: all 0.3s ease;
+    position: absolute; /* Positioning the arrow */
+    right: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* slider */
+.custom-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start position off-screen to the left */
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent white for slider effect */
+    transition: left 0.5s ease; /* Smooth slide transition */
+}
+
+.custom-btn:hover::before {
+    left: 0; /* Move slider to cover the button */
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .elementor-section {
+        padding: 30px 10px;
+    }
+
+    .speak-to-us {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-img img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .content-title {
+        font-size: 1.5em;
+    }
+
+    .custom-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .elementor-section {
+        padding: 20px 5px;
+    }
+
+    .profile-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .content-title {
+        font-size: 1.2em;
+    }
+
+    .custom-btn {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
